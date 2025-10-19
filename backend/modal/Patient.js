@@ -1,10 +1,11 @@
 const mongoose  = require("mongoose");
 const { computeAgeFromDob } = require("../utils/date");
+
 const emergencyContactSchema = new mongoose.Schema({
-    name: {type:String, required:true},
-    phone: {type:String, required:true},
-    relationship: {type:String,required:true},
-},{_id:false})
+    name: { type: String, required: true },
+    phone: { type: String, required: true },
+    relationship: { type: String, required: true },
+}, { _id: false })
 
 const medicalHistorySchema = new mongoose.Schema({
     allergies: {type: String, default: ''},
